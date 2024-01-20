@@ -36,3 +36,263 @@ ul,
 ol {
   list-style: none;
 }
+
+.content{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 711px 399px;
+  gap: 30px;
+  margin: 133px 30px;
+}
+/* Начало верстки левого столбца */
+
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 78px;
+}
+/* Начало верстки основного видео */
+.result__video-container{
+  position: relative;
+  width: 100%;
+  height: 386px;
+}
+
+.result__video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Конец верстки основного видео */
+
+/* Начало верстки формы */
+.search-form{
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form__fieldset{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.search-form__fieldset-title{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__textfield{
+  background: transparent;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  width: 225px;
+  height: 27px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: #fff;
+}
+
+.search-form__textfield::placeholder{
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.search-form__textfield:active{
+  border: none;
+}
+
+.search-form__textfield:focus{
+  outline: none;
+}
+
+.search-form__checkbox-list{
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  margin-right: 5px;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):has(:hover) {
+  text-decoration: underline;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  border: 2px solid #000;
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+  background-color: #fff;
+  background-position: center;
+}
+
+.search-form__submit-button{
+  width: 194px;
+  align-self: flex-end;
+}
+
+.button{
+  color: #fff;
+  font-weight: 700;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  height: 34px;
+}
+
+.button:active{
+  background: #545050;
+}
+
+.button:hover{
+  text-decoration: underline;
+}
+
+.buttom:focus{
+  outline: none;
+}
+
+.button:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+/* Конец верстки формы */
+
+/* Конец верстки левого столбца */
+
+/* Начало верстки правого столбца */
+
+.content__details{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.title{
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+}
+
+.content__accent{
+  color: #545050;
+}
+
+.content__list{
+  position: relative;
+  height: 298px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.content__list::-webkit-scrollbar{
+  display: none;
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
+  text-decoration: none;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline 1px #fff;
+}
+
+.content__card-link:focus{
+  outline: none;
+}
+
+.content__card-link:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__list-item:has(.content__card-link_current) {
+  background-color: #545050;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.content__video-card-description{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  color: #fff;
+}
+
+.content__video-card-thumbnail{
+  width: 194px;
+  height: 103px;
+  align-self: end;
+  object-fit: cover;
+  object-position: center;
+}
+
+.more-button{
+  width: 100%;
+}
+
+/* Конец верстки правого столбца */

@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -38,11 +41,13 @@ ol {
 }
 
 .content{
-  justify-content: center;
+  width: 1140px;
+  height: 534px;
+  justify-content: flex-end;
   display: grid;
   grid-template-columns: 711px 399px;
   gap: 30px;
-  margin: 133px 30px;
+  
 }
 /* Начало верстки левого столбца */
 
@@ -50,7 +55,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 78px;
+  justify-content: flex-end;
 }
 /* Начало верстки основного видео */
 .result__video-container{
@@ -102,8 +107,8 @@ ol {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  width: 225px;
-  height: 27px;
+  inline-size: 225px;
+  min-height: 27px;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -146,7 +151,7 @@ ol {
   margin-right: 5px;
 }
 
-.search-form__label:has(.search-form__pseudo-checkbox):has(:hover) {
+.search-form__label-text:hover {
   text-decoration: underline;
 }
 
@@ -201,7 +206,7 @@ ol {
 .content__details{
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 22px;
 }
 
 .title{
@@ -222,12 +227,8 @@ ol {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.content__list::-webkit-scrollbar{
-  display: none;
+  overflow-x: hidden;
+  gap: 30px;
 }
 
 .content__card-link {
@@ -253,12 +254,8 @@ ol {
   outline-offset: 1px;
 }
 
-.content__list-item:has(.content__card-link_current) {
+.content__card-link_current {
   background-color: #545050;
-}
-
-.content__list-item:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .content__video-card {

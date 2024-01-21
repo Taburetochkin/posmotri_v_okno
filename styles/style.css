@@ -42,7 +42,6 @@ ol {
 
 .content{
   width: 1140px;
-  height: 534px;
   justify-content: flex-end;
   display: grid;
   grid-template-columns: 711px 399px;
